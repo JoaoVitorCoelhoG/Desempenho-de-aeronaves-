@@ -1,0 +1,21 @@
+
+g =  9.80665;
+R = 287.05287;
+S = 110.4;
+gamma = 1.4;
+
+
+h_pressao = 9144; %30 000 ft
+h_densidade = 9753.6; %32 000 ft
+
+dados_p = ISA(h_pressao);
+dados_d = ISA(h_densidade);
+p = dados_p(3);
+d = dados_d(1);
+
+Tmod = p/(R*d);
+
+a = sqrt(gamma*R*Tmod);
+
+Ma = 240/a;
+
